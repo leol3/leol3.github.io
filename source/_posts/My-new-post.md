@@ -12,4 +12,4 @@ tags:
 2017-09-10 蜘蛛侠：英雄归来  
 2017-09-16 青浦奥特莱斯  
 
-![avatar](https://raw.githubusercontent.com/leol3/Blog_Album/master/min_photos/2017-05-01_xihu1.jpg)
+![avatar](https://hexo-leol3.oss-cn-shanghai.aliyuncs.com/min_photos/2017-05-01_xihu1.jpg)
