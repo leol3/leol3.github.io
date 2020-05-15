@@ -243,6 +243,136 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://leol3.github.io/2020/05/15/%E4%BD%BF%E7%94%A8hexo%E5%86%99%E5%8D%9A%E5%AE%A2%E6%B5%81%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Leol">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/05/15/%E4%BD%BF%E7%94%A8hexo%E5%86%99%E5%8D%9A%E5%AE%A2%E6%B5%81%E7%A8%8B/" itemprop="url">使用hexo发布博客流程</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-15T17:14:45+08:00">2020-05-15</time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>如果在一个新机器上发布博客，首先需要将hexo分支克隆到本地，然后<code>cd</code>到leol3.github.io目录，执行<code>npm install</code>  </p>
+<h4>新建文章</h4>
+
+<p>新建文章的命令为<code>hexo new page-name</code>，然后编辑<code>source/_posts/page-name.md</code>即可  </p>
+<h4>上传图片到相册</h4>
+
+<p>如果在新机器上，首先将<code>leol3/Blog_Album</code>代码克隆到本地，修改tool.py脚本中data.json对应的路径，并把照片放到photos目录下，执行<code>python tools.py</code>即可，另外需要将照片上传到阿里云oss的min_photos目录下（后续可以考虑通过脚本tools.py直接上传到阿里云oss）</p>
+<h4>部署到网站</h4>
+
+<p>执行以下命令：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>以上命令会将最新的网站静态文件push到github的master分支  </p>
+<p>另外需要通过<code>git push</code>命令更新hexo分支下的博客源文件</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://leol3.github.io/2020/05/14/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -528,7 +658,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
