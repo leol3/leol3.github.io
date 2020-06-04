@@ -1,6 +1,7 @@
 ---
-title: photos
+type: photos
 date: 2020-05-13 21:09:00
+fancybox: false
 ---
 
 <link rel="stylesheet" href="../lib/album/ins.css">
