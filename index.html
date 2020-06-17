@@ -243,6 +243,144 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://leol3.github.io/2020/06/17/spring%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Leol">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/17/spring%E7%AC%94%E8%AE%B0/" itemprop="url">spring笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-17T16:52:01+08:00">2020-06-17</time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4>依赖注入（DI）</h4>  
+spring最认同的技术是控制反转的依赖注入模式。控制反转（Ioc）是一个通用的概念，它可以用许多不同的方式表达，依赖注入仅仅是控制反转的一个具体的例子。  
+依赖注入可以以向构造函数传递参数的方式发生，或者通过使用setter方法post-construction。  
+
+<h4>面向方面的程序设计</h4>  
+spring框架的一个关键组件是面向方面的程序设计（AOP）框架。一个程序中跨越多个点的功能被称为横切关注点，这些横切关注点在概念上独立于应用程序的业务逻辑。  
+
+<hr>
+<p>spring提供两种不同类型的容器：BeanFactory 容器和ApplicationContext 容器。<br>有三个重要的方法把配置元数据提供给spring容器：  </p>
+<ul>
+<li>基于XML的配置文件</li>
+<li>基于注解的配置</li>
+<li>基于java的配置  </li>
+</ul>
+<p>spring框架支持以下五种bean的作用域：singleton、prototype、request、session和global session。  </p>
+<p>spring支持两种类型的事务管理：  </p>
+<ul>
+<li>编程式事务管理：这意味着你在编程的帮助下管理事务，有极大的灵活性，但却很难维护。</li>
+<li>声明式事务管理：这意味着你从业务代码中分离事务管理，仅仅使用注释或XML配置来管理事务。  </li>
+</ul>
+<p>声明式事务实例：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;aop:config&gt;</span><br><span class="line">      &lt;aop:pointcut id&#x3D;&quot;createOperation&quot; expression&#x3D;&quot;execution(* com.tutorialspoint.StudentJDBCTemplate.create(..))&quot;&#x2F;&gt;</span><br><span class="line">      &lt;aop:advisor advice-ref&#x3D;&quot;txAdvice&quot; pointcut-ref&#x3D;&quot;createOperation&quot;&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;aop:config&gt;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://leol3.github.io/2020/05/27/React%E6%95%99%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -797,7 +935,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
