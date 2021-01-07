@@ -123,7 +123,7 @@
 
 
 
-  <title>游玩记录 | Hexo</title>
+  <title>docker笔记 | Hexo</title>
   
 
 
@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://leol3.github.io/2020/05/13/My-new-post/">
+    <link itemprop="mainEntityOfPage" href="http://leol3.github.io/2021/01/07/docker%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Leol">
@@ -259,7 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">游玩记录</h1>
+          <h1 class="post-title" itemprop="name headline">docker笔记</h1>
         
 
         <div class="post-meta">
@@ -271,7 +271,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-13T17:52:09+08:00">2020-05-13</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-01-07T14:35:10+08:00">2021-01-07</time>
             
 
             
@@ -307,11 +307,37 @@
       
 
       
-        <h4>游玩记录</h4>
-2017-08-12~2017-08-15 黄山4日游  
+        <h4>Docker</h4>
+Docker是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Linux或Windows 机器上，也可以实现虚拟化。
 
-<p>2017-08-26 车墩一日游<br>2017-08-27 东佘山爬山<br>2017-09-03 泰晤士小镇<br>2017-09-10 蜘蛛侠：英雄归来<br>2017-09-16 青浦奥特莱斯  </p>
-<p><img src="https://hexo-leol3.oss-cn-shanghai.aliyuncs.com/min_photos/2017-05-01_xihu1.jpg" alt="avatar"></p>
+<p>docker相关命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker build -t search_core:v1 .</span><br><span class="line">docker run --name leol-mysql -e MYSQL_ROOT_PASSWORD&#x3D;my-secret-pw -d search_core:v1</span><br><span class="line">docker run -it -v c:\Users\shzhulin3\test.txt:&#x2F;etc&#x2F;test.txt nginx:latest</span><br><span class="line">docker exec -it 容器id &#x2F;bin&#x2F;sh</span><br></pre></td></tr></table></figure>
+
+<h4>kubernetes</h4>
+
+<p><font color=red><em>kube-apiserver</em></font></p>
+<p>API服务器是kubernetes控制面的组件，kube-apiserver验证并配置api对象的数据，这些对象包括pods、services、replicationcontrollers 等。</p>
+<p><font color=red><em>kube-scheduler</em></font></p>
+<p>控制平面组件，负责监视新创建的、未指定运行节点（node）的 Pods，选择节点让 Pod 在上面运行。</p>
+<p><font color=red><em>kube-controller-manager</em></font></p>
+<p>在主节点上运行 控制器 的组件。</p>
+<p>从逻辑上讲，每个控制器都是一个单独的进程， 但是为了降低复杂性，它们都被编译到同一个可执行文件，并在一个进程中运行。</p>
+<p>这些控制器包括：节点控制器、副本控制器、端点控制器</p>
+<p><font color=red><em>容器组Pod</em></font></p>
+<p>Pod是k8s集群中运行部署应用或服务的最小单元，一个pod由一个或多个容器组成，Pod中的容器不可分割，同一个Pod中的容器共享网络、存储资源，Pod可以挂载多个共享的存储卷。</p>
+<p><font color=red><em>kubelet</em></font></p>
+<p>kubelet是在每个节点上运行的主要节点代理，kubelet的主要功能为：Pod管理、容器健康检查、容器监控。</p>
+<p>kubectl命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get Pods -lapp&#x3D;demo -owide</span><br></pre></td></tr></table></figure>
+
+<p><font color=red>*kube-proxy</font></p>
+<p>kube-proxy 是集群中每个节点上运行的网络代理， 实现 Kubernetes 服务（Service） 概念的一部分。</p>
+<p>kube-proxy 维护节点上的网络规则。这些网络规则允许从集群内部或外部的网络会话与 Pod 进行网络通信。</p>
+<h4>其它</h4>
+
+<p>基于数据库的XA协议本质上就是两阶段提交，但由于性能原因在互联网高并发场景下并不适用</p>
+<p>Saga的核心就是补偿，一阶段就是服务的正常顺序调用（数据库事务正常提交），如果都执行成功，则第二阶段则什么都不做；但如果其中有执行发生异常，则依次调用其补偿服务（一般多逆序调用未已执行服务的反交易）来保证整个交易的一致性。应用实施成本一般。</p>
+<p>TCC的特点在于业务资源检查与加锁，一阶段进行校验，资源锁定，如果第一阶段都成功，二阶段对锁定资源进行交易逻辑，否则，对锁定资源进行释放。应用实施成本较高。</p>
 
       
     </div>
@@ -336,15 +362,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2020/11/10/%E5%88%A4%E6%96%ADtcp%E8%BF%9E%E6%8E%A5%E6%98%AF%E5%90%A6%E5%8F%AF%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95/" rel="next" title="判断tcp连接是否可用的方法">
+                <i class="fa fa-chevron-left"></i> 判断tcp连接是否可用的方法
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/05/14/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -458,7 +484,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text">游玩记录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text">Docker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text">kubernetes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">3.</span> <span class="nav-text">其它</span></a></li></ol></div>
             
 
           </div>
