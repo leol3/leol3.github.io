@@ -99,6 +99,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/leol3/leol3.github.io.git
+  repo: git@github.com:leol3/leol3.github.io.git
   branch: master
   message: publish blog
